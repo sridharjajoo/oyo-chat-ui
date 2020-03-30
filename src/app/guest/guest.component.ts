@@ -35,7 +35,6 @@ export class GuestComponent implements OnInit {
     this.data4 = new Array<Response>();
     this.responseService.getAllCustomer().subscribe(res => {
       this.data1 = res.second;
-      this.reply1 = res.first.text;
       console.log(res);
     })
   }
@@ -49,11 +48,12 @@ export class GuestComponent implements OnInit {
 
   onRefresh() {
     this.responseService.getAllCustomer().subscribe(res => {
+      console.log(res.first.text)
       if (this.data2.length == 0) {
-        this.reply2 = res.first.text;
+        this.reply1 = res.first.text;
         this.data2 = res.second;
       } else if (this.data3.length == 0) {
-        this.reply3 = res.first.text;
+        this.reply2 = res.first.text;
         this.data3 = res.second;
       } else if (this.data4.length == 0) {
         this.data4 = res.second;

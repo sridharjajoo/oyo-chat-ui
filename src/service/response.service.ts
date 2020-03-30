@@ -21,11 +21,24 @@ export class ResponseService {
   .set('Access-Control-Allow-Methods', 'GET')
 
 
-  public getAll() : Observable<any> {
-    const url = "http://localhost:8080/get-all-queries-cypher";
-    return this.http.get(url, 
-      {
+  public getAllCustomer() : Observable<any> {
+    const url = "http://localhost:8080/poll-nodes?userType=customer";
+    return this.http.get(url, {
         headers: this.header
       });
+  }
+
+  public getAllPm() : Observable<any> {
+    const url = "http://localhost:8080/poll-nodes?userType=pm";
+    return this.http.get(url, {
+        headers: this.header
+      });
+  }
+
+  public chooseUserType(usertype, id) : Observable<any> {
+    const url = "http://localhost:8080/chose?userType=" + usertype + "&id=" + id;
+    return this.http.get(url, {
+      headers: this.header
+    })
   }
 }

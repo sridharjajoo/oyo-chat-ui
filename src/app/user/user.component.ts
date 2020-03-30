@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import {Response} from 'src/app/VO/response';
 import { MatDialog } from '@angular/material/dialog';
 import { OptionsDialogComponent } from '../options-dialog/options-dialog.component';
+import { SharedService } from 'src/service/shared.service';
 
 @Component({
   selector: 'app-user',
@@ -14,7 +15,7 @@ export class UserComponent implements OnInit {
 
   public data : Array<Response>;
   constructor(private responseService: ResponseService, 
-    private dialog: MatDialog) { }
+    private share: SharedService) { }
 
   ngOnInit() {
     console.log(window.location.href);
@@ -27,24 +28,8 @@ export class UserComponent implements OnInit {
     })
   }
 
-  openDialog() {
-    console.log("Opended 1");
-    let dialogRef = this.dialog.open(OptionsDialogComponent, {
-      height: '200px',
-      width: '600px',
-      data : {
-        'data': this.data
-      }
-    });
-
-    dialogRef.afterClosed().subscribe(res => {
-      console.log(res);
-      
-    })
-  }
-
   onClick(i : any) {
-    console.log(i)
+    console.log(i);
   }
   
 }

@@ -6,8 +6,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
 import { FormsModule } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button/button-module';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule} from '@angular/material/toolbar';
+import { MatMenuModule} from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatRadioModule} from '@angular/material/radio';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +27,14 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     AppRoutingModule,
     FormsModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatMenuModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

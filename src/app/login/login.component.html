@@ -1,11 +1,9 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-    <span>PM/Customer App</span>
+    <span>PM/Guest App</span>
         <span class="example-fill-remaining-space"></span>
         <span class="align-center"></span>
         <span class="example-spacer"></span>
-        <button mat-button>About</button>
-        <button mat-button>Contact</button>
 </mat-toolbar-row>
 </mat-toolbar>
 <mat-toolbar color="primary">
@@ -28,10 +26,15 @@
                     <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
                   </mat-form-field></td>
                 </tr>
+
                 <tr>
-                    <td><mat-form-field class="example-full-width">
-                        <input matInput placeholder="PM/Customer" [(ngModel)]="pm" type="text" name="pm" required>
-                      </mat-form-field></td>
+                    <mat-form-field appearance="outline">
+                        <mat-label><b>User</b></mat-label>
+                        <mat-select [(value)]="selected">
+                            <mat-option value="pm">PM</mat-option>
+                            <mat-option value="guest">Guest</mat-option>
+                        </mat-select>
+                    </mat-form-field>
                 </tr>
             </table>
               </form>

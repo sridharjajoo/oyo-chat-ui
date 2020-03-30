@@ -21,21 +21,6 @@
 </div>
 
 
-<div style="margin-top: 150px"></div>
-<div class="list-group" style="float: left;margin-left: 20px">
-    <div *ngFor="let i of data; let j = index">
-        <div *ngIf="j == 1">
-            <div style="background: brown; height: 30px;color: white">{{i.source}}</div>
-        </div>
-    </div>
-    <div *ngFor="let i of data">
-        <button type="button" style="right: 0; width: 500px; height: 50px;" 
-        class="list-group-item list-group-item-action"
-        (click)="onClick(i)">{{i.text}}</button>
-    </div>
-</div>
-
-
 <!-- <div class="box2">
 </div>
     

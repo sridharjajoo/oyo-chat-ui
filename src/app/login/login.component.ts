@@ -10,12 +10,18 @@ export class LoginComponent implements OnInit {
 username: string;
 password: string;
 pm: string;
-
+user: any;
+selected: string;
+guest: string;
   constructor(private router: Router) { }
 
   ngOnInit() {}  
   login() : void {
-          window.open("user/" + this.pm);
-    
+      console.log(this.selected);
+      if (this.selected == 'pm') {
+        window.open("pm");
+      } else {
+        window.open("guest");   
+      }
   }
 }

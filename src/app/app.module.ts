@@ -18,13 +18,15 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog';
 import { OptionsDialogComponent } from './options-dialog/options-dialog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {MatSelectModule} from '@angular/material/select';
+import { GuestComponent } from './guest/guest.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     UserComponent,
     OptionsDialogComponent,
+    GuestComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatRadioModule,
     HttpClientModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,53 @@
+<!-- <div class="header">
+    </div> -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="../../assets/oyo.png" class="logo" alt="OYO Logo">
+    </a>  
+</nav>
+
+<div style="margin-top: 50px"></div>
+<div class="list-group" style="float: right;margin-right: 20px">
+    <div *ngFor="let i of data; let j = index">
+        <div *ngIf="j == 1">
+            <div style="background: brown; height: 30px;color: white">{{i.source}}</div>
+        </div>
+    </div>
+    <div *ngFor="let i of data">
+        <button type="button" style="right: 0; width: 500px; height: 50px;" 
+        class="list-group-item list-group-item-action"
+        (click)="onClick(i)">{{i.text}}</button>
+    </div>
+</div>
+
+
+<div style="margin-top: 150px"></div>
+<div class="list-group" style="float: left;margin-left: 20px">
+    <div *ngFor="let i of data; let j = index">
+        <div *ngIf="j == 1">
+            <div style="background: brown; height: 30px;color: white">{{i.source}}</div>
+        </div>
+    </div>
+    <div *ngFor="let i of data">
+        <button type="button" style="right: 0; width: 500px; height: 50px;" 
+        class="list-group-item list-group-item-action"
+        (click)="onClick(i)">{{i.text}}</button>
+    </div>
+</div>
+
+
+<!-- <div class="box2">
+</div>
+    
+<div class="box3">
+    </div>
+    
+    <div class="box4">
+    </div> -->
+
+<!-- <div class="footer">
+    <mat-form-field class="example-full-width">
+        <input class="input" matInput placeholder="Start Typing Here...">
+    </mat-form-field>
+    <button>Submit</button>
+</div> -->

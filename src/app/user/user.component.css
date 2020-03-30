@@ -1,0 +1,68 @@
+.header {
+    background: #246fa8;
+    height: 75px;
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    position: absolute;
+    top: 0;
+}
+
+.footer {
+    background: #246fa8;
+    height: 75px;
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    position: absolute;
+    bottom: 0;
+}
+
+.box1 {
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    background: #246fa8;
+    border-radius: 12px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.box2 {
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    background: grey;
+    border-radius: 12px;
+    margin-top: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.box3 {
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    background: #246fa8;
+    border-radius: 12px;
+    margin-top: 200px;
+    margin-right: 10px;
+}
+
+.box4 {
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    background: grey;
+    border-radius: 12px;
+    margin-top: 300px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.navbar-nav > li > a {padding-top:5px !important; padding-bottom:5px !important;}
+.navbar {min-height:32px !important}

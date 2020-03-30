@@ -13,11 +13,7 @@ pm: string;
 
   constructor(private router: Router) { }
 
-  ngOnInit() {
-  
-  }
-  
-  
+  ngOnInit() {}  
   login() : void {
           window.open("user/" + this.pm);
     

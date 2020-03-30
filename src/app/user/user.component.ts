@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ResponseService } from 'src/service/response.service';
 import { HttpClient } from '@angular/common/http';
+import {Response} from 'src/app/VO/response';
+import { MatDialog } from '@angular/material/dialog';
+import { OptionsDialogComponent } from '../options-dialog/options-dialog.component';
 
 @Component({
   selector: 'app-user',
@@ -9,7 +12,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserComponent implements OnInit {
 
-  constructor(private responseService: ResponseService, private http: HttpClient) { }
+  public data : Array<Response>;
+  constructor(private responseService: ResponseService, 
+    private dialog: MatDialog) { }
 
   ngOnInit() {
     console.log(window.location.href);
@@ -19,12 +24,29 @@ export class UserComponent implements OnInit {
     console.log(result)
     
     this.responseService.getAll().subscribe(res => {
+      this.data = res;
       console.log(res);
     })
+  }
 
-    // this.http.get('http://localhost:8080/get-all-queries-cypher').subscribe(res => {
-    //   console.log(res);
-    // });
+  openDialog() {
+    console.log("Opended 1");
+    let dialogRef = this.dialog.open(OptionsDialogComponent, {
+      height: '200px',
+      width: '600px',
+      data : {
+        'data': this.data
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(res => {
+      console.log(res);
+      
+    })
+  }
+
+  onClick(i : any) {
+    console.log(i)
   }
   
 }

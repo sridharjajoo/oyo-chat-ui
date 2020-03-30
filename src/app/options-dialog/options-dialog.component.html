@@ -1,0 +1,8 @@
+<div *ngFor="let i of data.data">
+    <input type="radio" [value]='i' [(ngModel)]="select" name="">
+    <label>&nbsp;&nbsp;{{i.text}}</label>
+</div>
+<mat-dialog-actions>
+        <button class="mat-raised-button">Close</button>
+        <button class="mat-raised-button mat-primary" (click)="func()">Submit</button>
+</mat-dialog-actions>

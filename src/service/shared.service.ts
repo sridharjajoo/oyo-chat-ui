@@ -5,5 +5,20 @@ import { Injectable } from '@angular/core';
 })
 export class SharedService {
 
-  constructor() { }
+  data: any;
+  constructor() { 
+
+  }
+
+  ngOnInit() {
+
+  }
+
+  storeDate(data) {
+    this.data = data;
+  }
+
+  fetchData() {
+    return this.data;
+  }
 }

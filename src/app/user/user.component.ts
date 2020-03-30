@@ -30,6 +30,7 @@ export class UserComponent implements OnInit {
 
   onClick(i : any) {
     console.log(i);
+    this.share.storeDate(i);
   }
   
 }

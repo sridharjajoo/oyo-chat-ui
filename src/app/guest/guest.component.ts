@@ -50,15 +50,16 @@ export class GuestComponent implements OnInit {
     this.responseService.getAllCustomer().subscribe(res => {
       console.log(res.first.text)
       if (this.data2.length == 0) {
-        // document.getElementById('d1').style.display = 'block';
+        document.getElementById('d1').style.display = "";
         this.reply1 = res.first.text;
         this.data2 = res.second;
       } else if (this.data3.length == 0) {
-        // document.getElementById('d2').style.display = 'block';
+        document.getElementById('d2').style.display = "";
         this.reply2 = res.first.text;
         this.data3 = res.second;
       } else if (this.data4.length == 0) {
-        // document.getElementById('d3').style.display = 'block';
+        document.getElementById('d3').style.display = "";
+        this.reply3 = res.first.text;
         this.data4 = res.second;
       }
     })

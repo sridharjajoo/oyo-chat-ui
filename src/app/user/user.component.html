@@ -8,6 +8,18 @@
 
 <button (click)="onRefresh()">Refresh</button>
 
+<!--LEFT-->
+<div style="margin-top: 50px"></div>
+<div id="d0" class="list-group" style="float: left;margin-left: 20px; display: none">
+    <div>
+        <div style="background: green; height: 30px;color: white">Customer</div>
+    </div>
+    <div>
+        <div [(ngModel)]="reply0" ngDefaultControl style="right: 0; width: 500px; height: 50px;" 
+        class="list-group-item list-group-item-action">{{reply0}}</div>
+    </div>
+</div>
+
 <div style="margin-top: 50px"></div>
 <div class="list-group" style="float: right;margin-right: 20px">
     <div *ngFor="let i of data1; let j = index">
@@ -24,7 +36,7 @@
 
 <!--LEFT-->
 <div style="margin-top: 250px"></div>
-<div class="list-group" style="float: left;margin-left: 20px">
+<div id="d1" class="list-group" style="float: left;margin-left: 20px; display: none">
     <div>
         <div style="background: green; height: 30px;color: white">Customer</div>
     </div>
@@ -51,12 +63,12 @@
 
 <!--LEFT-->
 <div style="margin-top: 450px"></div>
-<div class="list-group" style="float: left;margin-left: 20px">
+<div id="d2" class="list-group" style="float: left;margin-left: 20px; display: none">
     <div>
         <div style="background: green; height: 30px;color: white">Customer</div>
     </div>
     <div>
-        <div [(ngModel)]="reply2" style="right: 0; width: 500px; height: 50px;" 
+        <div [(ngModel)]="reply2" ngDefaultControl style="right: 0; width: 500px; height: 50px;" 
         class="list-group-item list-group-item-action">{{reply2}}</div>
     </div>
 </div>
@@ -79,12 +91,12 @@
 
     <!--LEFT-->
 <div style="margin-top: 650px"></div>
-<div class="list-group" style="float: left;margin-left: 20px">
+<div id="d3" class="list-group" style="float: left;margin-left: 20px; display: none">
     <div>
         <div style="background: green; height: 30px;color: white">Customer</div>
     </div>
     <div>
-        <div [(ngModel)]="reply3"  style="right: 0; width: 500px; height: 50px;" 
+        <div [(ngModel)]="reply3" ngDefaultControl  style="right: 0; width: 500px; height: 50px;" 
         class="list-group-item list-group-item-action">{{reply3}}</div>
     </div>
 </div>

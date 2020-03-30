@@ -20,6 +20,7 @@ export class UserComponent implements OnInit {
   public reply1: string;
   public reply2: string;
   public reply3: string;
+  public reply0: string;
 
   constructor(private responseService: ResponseService, 
     private share: SharedService) { }
@@ -30,7 +31,13 @@ export class UserComponent implements OnInit {
     this.data3 = new Array<Response>();
     this.data4 = new Array<Response>();
     this.responseService.getAllPm().subscribe(res => {
+      if (res != null) {
+       document.getElementById('d0').style.display = "";
+      } else {
+        document.getElementById('d0').style.display = 'none';
+      }
       this.data1 = res.second;
+      this.reply0 = res.first.text;
       console.log(res);
     })
   }
@@ -54,12 +61,15 @@ export class UserComponent implements OnInit {
       if (this.data1.length == 0) {
         this.data1 = res.second;
       } else if (this.data2.length == 0) {
+        document.getElementById('d1').style.display = "";
         this.reply1 = res.first.text;
         this.data2 = res.second;
       } else if (this.data3.length == 0) {
+        document.getElementById('d2').style.display = "";
         this.reply2 = res.first.text;
         this.data3 = res.second;
       } else if (this.data4.length == 0) {
+        document.getElementById('d3').style.display = "";
         this.reply3 = res.first.text;
         this.data4 = res.second;
       }

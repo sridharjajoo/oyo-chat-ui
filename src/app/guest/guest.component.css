@@ -44,3 +44,10 @@ background-size: cover;
     height: 80px;
     line-height: 80px;
   }
+
+  .customer
+  {
+      height: 30px;
+      text-align:center;
+      color:#FFF;
+  }

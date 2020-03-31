@@ -16,11 +16,11 @@
         <div class="list-group" style="float: right;margin-right: 20px; border-radius: 50px">
             <div *ngFor="let i of data1; let j = index">
                 <div *ngIf="j == 1">
-                    <div style="background: green; height: 30px;color: white">{{i.source}}</div>
+                    <div class="bg-success customer">{{i.source}}</div>
                 </div>
             </div>
             <div *ngFor="let i of data1">
-                <button type="button" style="right: 0; width: 500px; height: 50px;" 
+                <button type="btn btn-primary bg-light" style="right: 0; width: 500px; height: 50px;" 
                 class="list-group-item list-group-item-action" 
                 (click)="onClick(i)">{{i.text}}</button>
             </div>
@@ -40,7 +40,7 @@
 
         
         <!--RIGHT-->
-        <div style="margin-top: 350px"></div>
+        <div style="margin-top: 450px"></div>
         <div class="list-group" style="float: right;margin-right: 20px">
             <div *ngFor="let i of data2; let j = index">
                 <div *ngIf="j == 1">
@@ -52,10 +52,11 @@
                 class="list-group-item list-group-item-action"
                 (click)="onClick(i)">{{i.text}}</button>
             </div>
+
         </div>
 
         <!--LEFT-->
-        <div style="margin-top: 450px"></div>
+        <div style="margin-top: 650px"></div>
         <div id="d2" class="list-group" style="float: left;margin-left: 20px; display: none">
             <div>
                 <div style="background: brown; height: 30px;color: white">pm</div>
@@ -67,7 +68,7 @@
         </div>
 
         <!--RIGHT-->
-        <div style="margin-top: 550px"></div>
+        <div style="margin-top: 850px"></div>
         <div class="list-group" style="float: right;margin-right: 20px">
             <div *ngFor="let i of data3; let j = index">
                 <div *ngIf="j == 1">
@@ -82,7 +83,7 @@
         </div>
 
         <!--LEFT-->
-        <div style="margin-top: 650px"></div>
+        <div style="margin-top: 1050px"></div>
         <div id="d3" class="list-group" style="float: left;margin-left: 20px; display: none">
             <div>
                 <div style="background: brown; height: 30px;color: white">pm</div>
@@ -94,7 +95,7 @@
         </div>
 
         <!--RIGHT-->  
-        <div style="margin-top: 850px"></div>
+        <div style="margin-top: 1250px"></div>
         <div class="list-group" style="float: right;margin-right: 20px">
             <div *ngFor="let i of data4; let j = index">
                 <div *ngIf="j == 1">
@@ -110,7 +111,7 @@
 
 
         <!--LEFT-->
-        <div style="margin-top: 950px"></div>
+        <div style="margin-top: 1450px"></div>
         <div id="d4" class="list-group" style="float: left;margin-left: 20px; display: none">
             <div>
                 <div style="background: brown; height: 30px;color: white">pm</div>
@@ -122,7 +123,7 @@
         </div>
 
         <!--RIGHT-->  
-        <div style="margin-top: 1050px"></div>
+        <div style="margin-top: 1650px"></div>
         <div class="list-group" style="float: right;margin-right: 20px">
             <div *ngFor="let i of data5; let j = index">
                 <div *ngIf="j == 1">
@@ -138,7 +139,7 @@
 
 
         <!--LEFT-->
-        <div style="margin-top: 1150px"></div>
+        <div style="margin-top: 1850px"></div>
         <div id="d5" class="list-group" style="float: left;margin-left: 20px; display: none">
             <div>
                 <div style="background: brown; height: 30px;color: white">pm</div>
@@ -150,7 +151,7 @@
         </div>
 
         <!--RIGHT-->  
-        <div style="margin-top: 1250px"></div>
+        <div style="margin-top: 2050px"></div>
         <div class="list-group" style="float: right;margin-right: 20px">
             <div *ngFor="let i of data6; let j = index">
                 <div *ngIf="j == 1">
@@ -166,7 +167,7 @@
 
 
          <!--LEFT-->
-         <div style="margin-top: 1350px"></div>
+         <div style="margin-top: 2250px"></div>
          <div id="d6" class="list-group" style="float: left;margin-left: 20px; display: none">
              <div>
                  <div style="background: brown; height: 30px;color: white">pm</div>
@@ -178,7 +179,7 @@
          </div>
  
          <!--RIGHT-->  
-         <div style="margin-top: 1450px"></div>
+         <div style="margin-top: 2450px"></div>
          <div class="list-group" style="float: right;margin-right: 20px">
              <div *ngFor="let i of data7; let j = index">
                  <div *ngIf="j == 1">

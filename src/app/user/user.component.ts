@@ -43,19 +43,23 @@ export class UserComponent implements OnInit {
     this.responseService.getAllPm().subscribe(res => {
       if (res != null) {
        document.getElementById('d0').style.display = "";
+       this.data1 = res.second;
+       this.reply0 = res.first.text;
+       this.shouldFetch = false;
       } else {
         document.getElementById('d0').style.display = 'none';
       }
-      this.data1 = res.second;
-      this.reply0 = res.first.text;
       console.log(res);
     })
+
+    setInterval(() => {this.onRefresh()}, 1000);
   }
 
   onClick(i : any) {
     this.responseService.chooseUserType("pm", i.id).subscribe(res => {
       console.log(res);
     })
+    this.shouldFetch = true;
     console.log(i);
   }
 
@@ -67,34 +71,42 @@ export class UserComponent implements OnInit {
   }
 
   onRefresh() {
+    if (this.shouldFetch == true) {
     this.responseService.getAllPm().subscribe(res => {
-      if (this.data1.length == 0) {
+      if (this.data1.length == 0 && res != null) {
         this.data1 = res.second;
-      } else if (this.data2.length == 0) {
+        this.shouldFetch = false;
+      } else if (this.data2.length == 0 && res != null) {
         document.getElementById('d1').style.display = "";
         this.reply1 = res.first.text;
         this.data2 = res.second;
-      } else if (this.data3.length == 0) {
+        this.shouldFetch = false;
+      } else if (this.data3.length == 0 && res != null) {
         document.getElementById('d2').style.display = "";
         this.reply2 = res.first.text;
         this.data3 = res.second;
-      } else if (this.data4.length == 0) {
+        this.shouldFetch = false;
+      } else if (this.data4.length == 0 && res != null) {
         document.getElementById('d3').style.display = "";
         this.reply3 = res.first.text;
         this.data4 = res.second;
-      } else if (this.data5.length == 0) {
+        this.shouldFetch = false;
+      } else if (this.data5.length == 0 && res != null) {
         document.getElementById('d4').style.display = "";
         this.reply4 = res.first.text;
         this.data5 = res.second;
-      } else if (this.data6.length == 0) {
+        this.shouldFetch = false;
+      } else if (this.data6.length == 0 && res != null) {
         document.getElementById('d5').style.display = "";
         this.reply5 = res.first.text;
         this.data6 = res.second;
-      } else if (this.data7.length == 0) {
+        this.shouldFetch = false;
+      } else if (this.data7.length == 0 && res != null) {
         document.getElementById('d6').style.display = "";
         this.reply6 = res.first.text;
         this.data7 = res.second;
+        this.shouldFetch = false;
       }
-    })
+    })}
   }
 }

@@ -1,3 +1,12 @@
+html,
+body {
+ height: 100%;
+}
+
+body{
+ background:#fff;
+}
+
 .header {
     background: #246fa8;
     height: 75px;

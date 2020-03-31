@@ -17,10 +17,17 @@ export class UserComponent implements OnInit {
   public data2 : Array<Response>;
   public data3 : Array<Response>;
   public data4 : Array<Response>;
+  public data5 : Array<Response>;
+  public data6 : Array<Response>;
+  public data7 : Array<Response>;
   public reply1: string;
   public reply2: string;
   public reply3: string;
   public reply0: string;
+  public reply4: string;
+  public reply5: string;
+  public reply6: string;
+  public shouldFetch: boolean;
 
   constructor(private responseService: ResponseService, 
     private share: SharedService) { }
@@ -30,6 +37,9 @@ export class UserComponent implements OnInit {
     this.data2 = new Array<Response>();
     this.data3 = new Array<Response>();
     this.data4 = new Array<Response>();
+    this.data5 = new Array<Response>();
+    this.data6 = new Array<Response>();
+    this.data7 = new Array<Response>();
     this.responseService.getAllPm().subscribe(res => {
       if (res != null) {
        document.getElementById('d0').style.display = "";
@@ -72,6 +82,18 @@ export class UserComponent implements OnInit {
         document.getElementById('d3').style.display = "";
         this.reply3 = res.first.text;
         this.data4 = res.second;
+      } else if (this.data5.length == 0) {
+        document.getElementById('d4').style.display = "";
+        this.reply4 = res.first.text;
+        this.data5 = res.second;
+      } else if (this.data6.length == 0) {
+        document.getElementById('d5').style.display = "";
+        this.reply5 = res.first.text;
+        this.data6 = res.second;
+      } else if (this.data7.length == 0) {
+        document.getElementById('d6').style.display = "";
+        this.reply6 = res.first.text;
+        this.data7 = res.second;
       }
     })
   }

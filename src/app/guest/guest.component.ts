@@ -46,13 +46,13 @@ export class GuestComponent implements OnInit {
     this.data7 = new Array<Response>();
     this.responseService.getAllCustomer().subscribe(res => {
       this.data1 = res.second;
-      this.shouldFetch = false;
+      // this.shouldFetch = false;
       console.log(res);
     })
 
-    setInterval(() => {
-      this.onRefresh();
-    }, 1000);
+    // setInterval(() => {
+    //   this.onRefresh();
+    // }, 1000);
   }
 
   onClick(i : any) {
@@ -62,44 +62,44 @@ export class GuestComponent implements OnInit {
     this.responseService.chooseUserType("customer", i.id).subscribe(res => {
       console.log(res);
     });
-    this.shouldFetch = true;
+    // this.shouldFetch = true;
   }
 
   onRefresh() {
     console.log(this.shouldFetch);
-    if (this.shouldFetch == true) {
+    // if (this.shouldFetch == true) {
     this.responseService.getAllCustomer().subscribe(res => {
       if (this.data2.length == 0 && res != null) {
         document.getElementById('d1').style.display = "";
         this.reply1 = res.first.text;
         this.data2 = res.second;
-        this.shouldFetch = false;
+        // this.shouldFetch = false;
       } else if (this.data3.length == 0 && res != null) {
         document.getElementById('d2').style.display = "";
         this.reply2 = res.first.text;
         this.data3 = res.second;
-        this.shouldFetch = false;
+        // this.shouldFetch = false;
       } else if (this.data4.length == 0 && res != null) {
         document.getElementById('d3').style.display = "";
         this.reply3 = res.first.text;
         this.data4 = res.second;
-        this.shouldFetch = false;
+        // this.shouldFetch = false;
       } else if (this.data5.length == 0 && res != null){
         document.getElementById('d4').style.display = "";
         this.reply4 = res.first.text;
         this.data5 = res.second;
-        this.shouldFetch = false;
+        // this.shouldFetch = false;
       } else if(this.data6.length == 0 && res != null) {    
         document.getElementById('d5').style.display = "";
         this.reply5 = res.first.text;
         this.data6 = res.second;
-        this.shouldFetch = false;
+        // this.shouldFetch = false;
       } else if(this.data7.length == 0 && res != null) {    
         document.getElementById('d6').style.display = "";
         this.reply6 = res.first.text;
         this.data7 = res.second;
-        this.shouldFetch = false;
+        // this.shouldFetch = false;
       }
-    })}
+    })
   }
 }

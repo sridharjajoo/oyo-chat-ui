@@ -43,12 +43,12 @@ export class UserComponent implements OnInit {
     this.responseService.getAllPm().subscribe(res => {
       if (res != null) {
        document.getElementById('d0').style.display = "";
-       this.data1 = res.second;
-       this.reply0 = res.first.text;
       //  this.shouldFetch = false;
       } else {
         document.getElementById('d0').style.display = 'none';
       }
+      this.data1 = res.second;
+      this.reply0 = res.first.text;
       console.log(res);
     })
 

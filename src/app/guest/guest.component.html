@@ -6,6 +6,8 @@
                 <a class="navbar-brand" href="#">
                     <img src="../../assets/oyo.png" class="logo" alt="OYO Logo">
                 </a>
+                <button (click)="onRefresh()" style="display: none">Refresh</button>
+
                 <div class="card topcard">
                         <img class="card-img-top" src="../../assets/user.png" alt="User">
                         <div class="card-body">
@@ -16,8 +18,6 @@
               
         <!-- </nav> -->
         
-        <button (click)="onRefresh()">Refresh</button>
-
         <!--RIGHT-->
         <div style="margin-top: 50px"></div>
         <div class="list-group" style="float: right;margin-right: 20px; border-radius: 50px" role="tablist">

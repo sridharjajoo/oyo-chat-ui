@@ -3,26 +3,37 @@
 <div class="bgimg">
         <!-- <nav class="navbar navbar-light bg-light"> -->
            <div style="float: left">
-            <a class="navbar-brand" href="#">
-                <img src="../../assets/oyo.png" class="logo" alt="OYO Logo">
-            </a>  
-        </div>
+                <a class="navbar-brand" href="#">
+                    <img src="../../assets/oyo.png" class="logo" alt="OYO Logo">
+                </a>
+                <div class="card topcard">
+                        <img class="card-img-top" src="../../assets/user.png" alt="User">
+                        <div class="card-body">
+                          <p class="user">User: <b>Biswa Kalyan</b></p>
+                        </div>
+                      </div>  
+            </div>
+              
         <!-- </nav> -->
         
         <button (click)="onRefresh()">Refresh</button>
 
         <!--RIGHT-->
         <div style="margin-top: 50px"></div>
-        <div class="list-group" style="float: right;margin-right: 20px; border-radius: 50px">
+        <div class="list-group" style="float: right;margin-right: 20px; border-radius: 50px" role="tablist">
+            
             <div *ngFor="let i of data1; let j = index">
                 <div *ngIf="j == 1">
                     <div class="bg-success customer">{{i.source}}</div>
                 </div>
             </div>
+
             <div *ngFor="let i of data1">
+                
                 <button type="btn btn-primary bg-light" style="right: 0; width: 500px; height: 50px;" 
                 class="list-group-item list-group-item-action" 
                 (click)="onClick(i)">{{i.text}}</button>
+
             </div>
         </div>
 

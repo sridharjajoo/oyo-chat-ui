@@ -41,7 +41,7 @@ export class UserComponent implements OnInit {
     this.data6 = new Array<Response>();
     this.data7 = new Array<Response>();
     this.responseService.getAllPm().subscribe(res => {
-      if (res != null) {
+      if (res.first.id != -1) {
        document.getElementById('d0').style.display = "";
       //  this.shouldFetch = false;
       } else {
